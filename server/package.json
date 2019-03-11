@@ -1,0 +1,14 @@
+{
+  "name": "nv-webblog-server",
+  "version": "1.0.0",
+  "description": "nodejs vuejs webblog server (backend)",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "solah mad-adam",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
