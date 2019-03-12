@@ -5,7 +5,7 @@ module.exports = (app) =>{
     app.post('/user', userController.create)
 
     //edit user
-    app.put('/user/userId', userController.put)
+    app.put('/user/:userId', userController.put)
 
     //delete user
     app.delete('/user/:userId', userController.remove)
