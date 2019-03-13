@@ -20,30 +20,7 @@ app.get('/hello/:person', function(req, res){
     res.send('say hello with' + req.params.person)
 })
 
-//API get user by id 
-app.get('/user/:userId', function(req, res){
-    res.send('ดูข้อมูลผู้ใช้: ' + req.params.userId)
-})
 
-//API get all user 
-app.get('/users/', function(req, res){
-    res.send('เรียกข้อมูล ผู้ใช้ทั้งหมด')
-})
-
-//API create user
-app.post('/user/', function(req, res){
-    res.send('ทำการสร้างผู้ใช้งาน' + JSON.stringify(req.body))
-})
-
-//API edit user
-app.put('/user/:userId', function(req, res){
-    res.send('ทำการแก้ไขผู้ใช้งาน: ' + req.params.userId + ':' + JSON.stringify(req.body))
-})
-
-//API delete user
-app.delete('/user/:userId', function(req, res){
-    res.send('ทำการลบผู้ใช้: ' + req.params.userId + ':' + JSON.stringify(req.body))
-})
 
 sequelize.sync({force: false}).then(() => {
     app.listen(port, function(){
