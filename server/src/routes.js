@@ -1,6 +1,6 @@
 const userController = require('./controllers/userController.js')
 
-module.exports = (app) =>{
+module.exports = (app) => {
     //create user
     app.post('/user', userController.create)
 

@@ -1,15 +1,16 @@
 let express = require('express')
 let bodyPaser = require('body-parser')
+let cors = require('cors')
 const {sequelize} = require('./models')
 
 const app = express()
 
 app.use(bodyPaser.json())
 app.use(bodyPaser.urlencoded({extended: true}))
+app.use(cors())
 
 require('./routes')(app)
 
-//controller backend
 //API get status server
 app.get('/status', function(req, res){
     res.send('Hello World')
@@ -20,16 +21,10 @@ app.get('/hello/:person', function(req, res){
     res.send('say hello with' + req.params.person)
 })
 
-
+let port = 8081
 
 sequelize.sync({force: false}).then(() => {
     app.listen(port, function(){
         console.log('Server Running on ' + port)
     })
 })
-
-let port = 8081
-
-/*app.listen(port, function(){
-    console.log('server on' + port)
-})*/

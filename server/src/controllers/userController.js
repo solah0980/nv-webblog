@@ -1,4 +1,3 @@
-//ประกาศ controller เพื่อให้ routes นำไปใช้
 const {User} = require('../models')
 module.exports = {
     //get all user
