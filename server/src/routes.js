@@ -1,4 +1,5 @@
 const userController = require('./controllers/userController.js')
+const UserAuthenController = require('./controllers/UserAuthenController')
 
 module.exports = (app) => {
     //create user
@@ -15,4 +16,8 @@ module.exports = (app) => {
 
     //get user by id
     app.get('/user/:userId', userController.show)
+
+    app.post('/login',
+        UserAuthenController.login
+    )
 }

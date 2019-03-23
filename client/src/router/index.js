@@ -22,12 +22,12 @@ export default new Router({
       component: UserCreate
     },
     {
-      path: '/user/edit',
+      path: '/user/edit/:userId',
       name: 'user-edit',
       component: UserEdit
     },
     {
-      path: '/user/show',
+      path: '/user/:userId',
       name: 'user-show',
       component: UserShow
     }
