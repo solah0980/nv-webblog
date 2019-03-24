@@ -17,7 +17,6 @@ module.exports = (app) => {
     //get user by id
     app.get('/user/:userId', userController.show)
 
-    app.post('/login',
-        UserAuthenController.login
-    )
+    //token
+    app.post('/login',UserAuthenController.login)
 }
